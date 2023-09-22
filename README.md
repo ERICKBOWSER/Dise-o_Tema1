@@ -38,6 +38,10 @@ Los colores informan al usuario del contenido de la página web.
 ---
 
 
+## Tipografías
+
+No usar más de 3 fuentes distintas
+
 
 
 
