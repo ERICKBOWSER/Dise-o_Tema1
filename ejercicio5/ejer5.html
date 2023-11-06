@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/estilos.css" rel="STYLESHEET" type="text/css" />
+    <title>Inicio de sesión</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <form action="ejer5.html" method="post">
+                    <div id="radio-sr">
+                        <input type="radio" name="sr" id="sr" />
+                        <label for="sr">Sr.</label>
+                        <input type="radio" name="sr" id="sra" />
+                        <label for="sr">Sra.</label>
+                    </div>
+                    <input type="text" name="nombre" id="nombre" aria-label="nombre/razón social"
+                        pattern="[a-z A-Z]{20}" placeholder="Nombre/Razón Social" />
+                    <input type="text" name="apellidos" id="apellidos" pattern="[a-z A-Z]{50}" aria-label="apellidos"
+                        placeholder="Apellidos*" />
+
+                    <input type="email" name="email" id="email" placeholder="Email*" />
+
+                    <input type="password" name="contrasenia" id="contrasenia" aria-label="contraseña"
+                        placeholder="Contraseña*" />
+
+                    <label for="fechaNac">FECHA DE NACIMIENTO</label>
+                    <input type="date" id="fechaNac" name="fechaNac" />
+
+                    <input type="text" id="dni" name="dni" title="Indique su dni" pattern="[0-9]{8}[a-z A-Z]{1}"
+                        placeholder="DNI/NIF/NIE*" />
+
+                    <input type="text" id="direccion" name="direccion" title="Indique su dirección"
+                        pattern="[a-z A-Z 0-9]{50}" placeholder="Dirección" />
+
+                    <input type="text" id="cp" name="cp" title="Indique su código postal" pattern="[0-9]{5}"
+                        placeholder="Código postal" title="Indique su código postal" />
+
+                    <input type="text" id="ciudad" name="ciudad" pattern="[a-z A-Z 0-9]{20}" placeholder="Ciudad*"
+                        title="Indique su ciudad" />
+
+                    <select name="pais" id="pais" title="Indique el país" aria-label="pais">
+                        <option value="Alemania">Alemania</option>
+                        <option value="espania" selected>España</option>
+                        <option value="EEUU">EE.UU</option>
+                    </select>
+
+                    <select name="provincia" id="provincia" title="Indique la provincia" aria-label="provincia"
+                        placeholder="Provincia*">
+                        <option value="malaga">Málaga</option>
+                        <option value="granada">Granada</option>
+                        <option value="almeria">Almeria</option>
+                        <option value="cadiz">Cádiz</option>
+                    </select>
+
+                    <label for="info">Información adicional</label>
+
+                    <input type="tel" id="tel" name="tel" placeholder="Teléfono móvil" pattern="[0-9]{9}" />
+
+                    <div id="datos">
+                    <input type="checkbox" id="datosPersonales" name="datosPersonales" aria-label="Datos personales" />
+                    <label for="datosPersonales">Estos datos personales se utilizarán para responder a sus búsquedas,
+                        procesar sus pedidos o autorizar el acceso.</label>
+                    </div>
+                    
+                    <input type="submit" name="registrarse" id="registrarse" value="Registrarse" />
+
+                </form>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>
