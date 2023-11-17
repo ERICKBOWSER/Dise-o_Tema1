@@ -33,7 +33,6 @@ header{
   flex-flow: row wrap;
   flex: 100%;
 
-  border: 1px solid red;
 }
 
 header > img{
@@ -42,7 +41,6 @@ header > img{
 
 header > h1{
   flex: 1;
-  border: 1px solid blue;
 }
 
 header h1{
@@ -77,20 +75,18 @@ nav#main-menu > label{
   margin: 0 auto;
   color: white;
 
-  border: 1px solid green;
 }
 
 nav#main-menu > label > span{
-
-  border: 1px solid red;
+  font-size: 2rem;
 }
 
 /* Escondemos el checkbox de la hamburguesa*/
 nav > input#hamburger{
-  visibility: hidden;
+  display: none;
 }
 
-nav#main-menu:hover > ul{
+nav#main-menu > input:checked + ul{
   display: block;
 }
 
@@ -100,13 +96,13 @@ nav ul{
   flex-direction: column;
   margin: 0 auto;
 
-  border: 1px solid green;
 }
 
 
 nav ul li{
   list-style-type: none;
   margin: 0 auto;
+  padding: 0.5rem;
 }
 
 nav#main-menu{
@@ -116,8 +112,6 @@ nav#main-menu{
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-
-  border: 2px solid yellow;
 }
 
 main section#principal{
@@ -159,4 +153,60 @@ div#content main section article.news-art img{
 
 div#content main section article.news-art p{
   padding: 0 1rem;
+}
+
+@media(min-width: 800px){
+  main > section#principal > article.news-art{
+    flex-flow: row wrap;
+  }
+
+  main > section#principal > article.news-art > h3{
+    margin: 0;   
+    flex: 0 100%;
+    padding-bottom: 1rem;
+  }
+
+  main > section#principal > article.news-art > img{
+    flex: 0 40%;
+    margin: 0px;
+
+  }
+
+  main > section#principal > article.news-art > p{
+    margin: 0px;
+    flex: 1 60%;
+    text-align: justify;    
+    margin-top: 2rem;
+  }
+
+}
+
+@media(min-width: 1200px){
+
+  nav#main-menu{
+    flex: 0 100%;
+  }
+  nav#main-menu > label{
+    display: none;
+  }
+
+  nav#main-menu > ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    margin: 0;
+  }
+
+  main > section#principal > h2{
+    margin: 0px;
+  }
+
+  main > section#principal > article.news-art{
+    flex: 50%;
+  }
+
+  main > section#principal > article#primerElemento{
+    flex: 100%;
+  }
 }
