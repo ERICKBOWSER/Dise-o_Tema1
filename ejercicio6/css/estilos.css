@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /*margin: 0px auto;  HACE QUE LOS ELEMENTOS DEL ARTICULO SE MUEVAN AL CENTRO*/ 
+}
+
+header > h1{
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+section#ofertas{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+article.item-oferta{
+    border: 1px solid #ccc;
+    border-radius: 1.4rem;
+    flex: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+section#ofertas > article.item-oferta > h3{
+    order: 1;
+    margin: 0 auto;
+}
+
+section#ofertas > article.item-oferta > img{
+    order: 2;
+}
+
+section#ofertas > article.item-oferta > p{
+    order: 3;
+}
+
+section#ofertas > article.item-oferta > ul{
+    order: 4;
+}
+
+section#ofertas > article.item-oferta > button{
+    order: 5;
+}
+
+section#ofertas > article.item-oferta > h3, p, ul, img{
+    margin-bottom: 1rem;
+}
+
+button.boton-cesta{
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    background-color: rgb(47, 151, 28);
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+    box-shadow: 0px 8px 12px rgba(254, 0, 0, 0.2);
+}
+
+button.boton-cesta:hover{
+        background-color: red;
+        cursor: pointer;
+}   
+
+
+@media(min-width: 800px){
+    article.item-oferta{
+        flex-flow: row wrap;
+        flex: 0;
+        justify-content: flex-start;
+        margin: 0.5rem; 
+    }
+}
