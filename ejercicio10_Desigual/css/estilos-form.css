@@ -1,12 +1,8 @@
 
-@font-face{
-    font-family: 'Open Sans' Condensed;    
-    src: url("font-awesome");
-}
 
 *{
     box-sizing: border-box;    
-    font-family: 'Open Sans' Condensed;
+    font-family: 'Open Sans Condensed';
 }
 
 a{
@@ -17,7 +13,6 @@ header{
     display: flex;
     flex-flow: row wrap;
 
-    border: 1px solid yellow;
 }
 
 header > picture#logo-cabecera{
@@ -25,18 +20,15 @@ header > picture#logo-cabecera{
     flex: 0 70%;
     align-items: center;
     padding-left: 1.4rem;
-    border: 1px solid violet;
 }
 
 header > picture > img{
-    width: 50%;
-    border: 1px solid blue;
+    width: 250px
 }
 
 header > nav#bloque-iconos{
     flex: 0 30%;
 
-    border: 1px solid red;
 }
 
 header > nav#bloque-iconos > ul{
@@ -48,8 +40,6 @@ header > nav#bloque-iconos > ul{
 
 header > nav#bloque-iconos > ul > li{
     font-size: 2.2rem;
-
-    border: 1px solid black;
 }
 
 header > nav#menu-principal{
@@ -59,23 +49,25 @@ header > nav#menu-principal{
     height: 4rem;
     background-color: black;
     
-    border: 1px solid green;
 }
 
 header > nav#menu-principal > div#hamburguesa{
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto;
 }
 
 header > nav#menu-principal > div#hamburguesa > span{
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
+    cursor: pointer;
 }
 
 header > nav#menu-principal > div#hamburguesa > span:nth-child(2){
-    font-size: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 header > nav#menu-principal > ul#menu{
@@ -85,6 +77,23 @@ header > nav#menu-principal > ul#menu{
 header > nav#menu-principal:hover > ul#menu{
     display: flex;
     flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+header > nav#menu-principal:hover > ul#menu > li{
+    margin-bottom: 1rem;
+}
+
+header > nav#menu-principal:hover > ul#menu > li > a, ul.submenu > li > a{
+    color: white;
+    text-decoration: none;
 }
 
 main > section#form-contacto{
@@ -92,18 +101,15 @@ main > section#form-contacto{
     flex-flow: row wrap;
     flex: 0 50%;
 
-    border: 1px solid goldenrod;
 }
 
 main > section#form-contacto > h2{
     flex: 0 100%;
     text-align: center;
     margin: 0 auto;
-    font-size: 1.2rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1.2rem;
-
-    border: 1px solid blue;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 main > section#form-contacto > form#contacto{
@@ -116,6 +122,7 @@ main > section#form-contacto > form#contacto{
 
 main > section#form-contacto > form#contacto > span, label, input{
     flex: 0 50%;
+    font-size: 1.1rem;
     
 }
 
@@ -124,10 +131,11 @@ main > section#form-contacto > form#contacto > label{
 }
 main > section#form-contacto > form#contacto > input, select, textarea{
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 4px;
     border: 1px solid black;
     color: #6a6868;
+    font-size: 1.1rem;
 }
 
 main > section#form-contacto > form#contacto > input:nth-child(15){
@@ -142,15 +150,17 @@ main > section#form-contacto > form#contacto > input:focus, select:focus, textar
 
 
 main > section#form-contacto > form#contacto > span#caracteres{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #6f6d6d;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+footer{
+    background-color: #ccc;
 }
 
 footer > nav#menu-adicional{
     flex: 100%;
-
-    border: 1px solid red;
 }
 
 footer > nav#menu-adicional > ul{
@@ -164,3 +174,19 @@ footer > nav#menu-adicional > ul > li{
     margin-bottom: 5px;
 }
 
+@media(min-width:1000px){
+    header > picture#logo-cabecera{
+        justify-content: center;
+    }
+
+    header > nav#bloque-iconos{
+        flex: 0 10%;
+
+        border: 1px solid red
+    }
+
+    header > nav#bloque-iconos > ul{
+        
+        justify-content: flex-end;
+    }
+}
