@@ -1,0 +1,109 @@
+
+@font-face{
+    font-family: 'Open Sans' Condensed;    
+    src: url("font-awesome");
+}
+
+*{
+    box-sizing: border-box;    
+    font-family: 'Open Sans' Condensed;
+}
+
+a{
+    color: black;
+}
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+
+    border: 1px solid yellow;
+}
+
+header > picture#logo-cabecera{
+    flex: 0 70%;
+
+    border: 1px solid violet;
+}
+
+header > picture > img{
+    width: 50%;
+    border: 1px solid blue;
+}
+
+header > nav#bloque-iconos{
+    flex: 0 30%;
+
+    border: 1px solid red;
+}
+
+header > nav#bloque-iconos > ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+header > nav#bloque-iconos > ul > li{
+    font-size: 2.2rem;
+
+    border: 1px solid black;
+}
+
+header > nav#menu-principal{
+    display: flex;
+    flex-direction: column;
+    flex: 0 100%;
+    height: 4rem;
+    background-color: black;
+    
+    border: 1px solid green;
+}
+
+header > nav#menu-principal > div#hamburguesa{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+header > nav#menu-principal > div#hamburguesa > span{
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+header > nav#menu-principal > ul#menu{
+    display: none;
+}
+
+main > section#form-contacto{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 50%;
+
+    border: 1px solid goldenrod;
+}
+
+main > section#form-contacto > h2{
+    flex: 100%;
+    text-align: center;
+
+    border: 1px solid blue;
+}
+
+main > section#form-contacto > form#contacto{
+    display: flex;
+    flex-direction: column;
+    flex: 0 50%;
+
+}
+
+main > section#form-contacto > form#contacto > span, label, input{
+    flex: 0 50%;
+
+    border: 1px solid red;
+}
+
+
+
+
