@@ -1,0 +1,43 @@
+*{box-sizing: border-box;}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 0 50%;
+
+    border: 1px solid blue;
+}
+
+main > h1{
+    font-size: 2.5rem;
+}
+
+main > form{
+    display: flex;
+    flex-flow: column;
+    flex: 0 50%;
+
+    border: 1px solid red
+}
+
+main > form > input{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1rem;
+    padding: 0.8rem;
+}
+
+main > form > label{
+    margin-bottom: 1rem;
+    margin-left: 0.9rem;
+}
+
+main > form > button{
+    padding: 1rem;
+    border-radius: 20px;
+    flex: 0 20%;
+    background-color: rgba(46, 40, 40, 0.945);
+    color: blanchedalmond;
+}

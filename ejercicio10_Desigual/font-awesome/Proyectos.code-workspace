@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../../../home/guerig/Documentos/saludar"
+		},
+		{
+			"path": "../../../../../../../home/guerig/conversor"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Proyectos"
+	}
+}
