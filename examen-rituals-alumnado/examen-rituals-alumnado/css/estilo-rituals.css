@@ -1,0 +1,308 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #efedeb;
+}
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #1a191a;
+    justify-content: space-around;
+    padding: 1.5rem 0rem 0.5rem 0rem;
+}
+
+div#content > header#header-web > nav#bloque-iconos{
+    order: 3;
+}
+
+div#content > header#header-web > nav#bloque-iconos > a{
+    text-decoration: none;
+}
+
+div#content > header#header-web > a#logo{
+    order: 2;
+}
+
+
+div#content > header#header-web > nav#menu-principal > ul, 
+input#menu-hamburguesa{
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+div#content > header#header-web > nav#menu-principal > ul > li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+div#content > header#header-web > nav#menu-principal > label[for="menu-hamburguesa"]{
+    order: 1;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+div#content > header#header-web > nav#menu-principal > input:checked + ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: black;
+    width: 90%;
+}
+
+div#content > header#header-web > nav#menu-principal > input:checked + ul > li{
+    padding: 1rem 0 1rem 0 ;
+}
+
+div#content > header#header-web > nav#menu-principal > input:checked + ul > li > a {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+section{
+    background-color: #f5f4f3;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section#sec-gelducha > h2{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 1.4rem;
+    padding-top: 1.3rem;
+    flex: 0 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main > section#sec-gelducha > div{    
+    display: flex;
+    justify-content: center;
+    flex: 0 100%;
+
+}
+
+main > section#sec-gelducha > div > p{
+    flex: 0 50%;
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+}
+
+h2, section#sec-gelducha > div{
+    background-color: black;
+}
+
+main > section#sec-gelducha > article.item-sec{
+    background: white; 
+    color: #515152; 
+    border: 2px solid #eeedec;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 50%;
+
+}
+
+main > section#sec-gelducha > article.item-sec > picture > img{
+    background-color: #faf9f8;
+    order: 1;
+    width: 100%;
+    height: 100%;
+}
+
+main > section#sec-gelducha > article.item-sec > h3{
+    order: 2;
+}
+
+main > section#sec-gelducha > article.item-sec > p{
+    order: 3;
+}
+
+main > section#sec-gelducha > article.item-sec > span{
+    order: 4;
+}
+
+main > section#sec-gelducha > article.item-sec > img{
+    order: 5;
+    width: 80px;
+}
+
+main > section#sec-gelducha > article.item-sec input{
+    order: 6;
+    display: none;
+}
+
+main > section#sec-gelducha > article.item-sec > h3, p, span, img{
+    padding: 0 0.5rem 0  0.5rem;
+}
+
+footer{
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    color: white;
+    justify-content: center;
+}
+
+footer > nav#menu-adicional{
+    flex: 0 90%;
+}
+
+footer > nav#menu-adicional > ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+
+}
+
+footer > nav#menu-adicional > ul > li{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+
+}
+
+footer > nav#menu-adicional > ul > li > span{
+    padding: 0;
+}
+
+footer > nav#menu-adicional > ul > li > ul{
+    display: none;
+}
+
+footer > nav#menu-social{
+    flex: 0 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer > nav#menu-social > ul{
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: center;
+}
+
+footer > nav#menu-social > ul{
+    padding: 0;
+    margin: 0;
+}
+
+footer > nav#menu-social > ul > li > a > img{
+    width: 50px;
+}
+
+footer > small{
+    font-size: 0.6rem;
+    flex: 0 100%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+@media(min-width: 700px){
+    main > section#sec-gelducha > article.item-sec{
+        flex: 0 33.3%;
+    }
+}
+
+@media(min-width: 1000px){
+
+    div#content > header#header-web {
+        align-items: center;
+    }
+
+    div#content > header#header-web > a#logo{
+        order: 1;
+    }
+
+    div#content > header#header-web > nav#menu-principal{
+        order: 2;
+    }
+
+    div#content > header#header-web > nav#menu-principal > label{
+        display: none;
+    }
+
+    div#content > header#header-web > nav#menu-principal > ul{
+        display: flex;
+    }
+
+    div#content > header#header-web > nav#menu-principal > ul > li > a > span:nth-child(2){
+        display: none;
+    }
+
+    main > section#sec-gelducha > article.item-sec{
+        flex: 0 25%;
+        justify-content: center;
+    }
+
+    main > section#sec-gelducha > div > p{
+        flex: 0 15%;
+    }
+
+    main > section#sec-gelducha > article.item-sec > p{
+        text-align: center;
+    }
+
+    main > section#sec-gelducha > article.item-sec > img{
+        display: none;
+    }
+
+    main > section#sec-gelducha > article.item-sec > span{
+        flex: 0 100%;
+        text-align: center;
+    }
+
+    main > section#sec-gelducha > article.item-sec > input{
+        display: block;
+        margin: 1rem 0 1rem 0;
+        padding: 0.8rem 2rem 0.8rem 2rem;
+        background-color: white;
+        border: 1px solid black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    footer {
+        align-items: center;
+    }
+
+    footer > nav#menu-adicional{
+        flex-flow: row;
+        flex: 0 80%;
+    }
+
+    footer > nav#menu-adicional > ul{
+        flex-flow: row;
+        justify-content: space-around;
+    }
+
+    footer > nav#menu-adicional > ul > li{
+        border: none;
+    }
+
+    footer > nav#menu-adicional > ul > li > span:nth-child(2){
+        display: none;
+    }
+
+    footer > nav#menu-social{
+        flex-flow: row;
+        flex: 0 20%;
+    }
+
+
+}
