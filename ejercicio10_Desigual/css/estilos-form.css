@@ -58,6 +58,50 @@ header > nav#menu-principal > div#hamburguesa{
     margin: 0 auto;
 }
 
+/* --------------- HAMBURGUESA ANIMADA -------------------- */
+
+div#hamburguesa{
+    width: 60px;
+    height: 60px;
+    padding-top: 0.6rem;
+}
+
+label[for="hamburguer-icon"] {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    cursor: pointer;
+}
+
+label[for="hamburguer-icon"] > input#hamburguer-icon{
+    display: none;
+}
+
+label[for="hamburguer-icon"] > span.hamburguer-line{
+    display: block;
+    background-color: white;
+    width: 50px;
+    padding: 0.3rem;
+    margin-bottom: 0.22rem;
+}
+
+label[for="hamburguer-icon"]:hover > span.hamburguer-line:nth-child(2){
+    transform: translateY(9px) rotate(45deg);
+    transition-duration: 2s;
+}
+
+label[for="hamburguer-icon"]:hover > span.hamburguer-line:nth-child(3){
+    transform: scaleX(0);
+}
+
+label[for="hamburguer-icon"]:hover > span.hamburguer-line:nth-child(4){
+    transform: translateY(-9px) rotate(-45deg);
+    margin-top: -0.5rem;
+    transition-duration: 2s;
+}
+
+/* ------------------------------------------------------------ */
+
 header > nav#menu-principal > div#hamburguesa > span{
     color: white;
     font-size: 1.8rem;
@@ -84,14 +128,15 @@ header > nav#menu-principal:hover > ul#menu{
     cursor: pointer;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 0.5rem;
 
 }
 
-header > nav#menu-principal:hover > ul#menu > li{
+header > nav#menu-principal > ul#menu:hover > li{
     margin-bottom: 1rem;
 }
 
-header > nav#menu-principal:hover > ul#menu > li > a, ul.submenu > li > a{
+header > nav#menu-principal > ul#menu:hover > li > a, ul.submenu > li > a{
     color: white;
     text-decoration: none;
 }
@@ -103,6 +148,8 @@ main > section#form-contacto{
     flex: 0 50%;
 
 }
+
+
 
 main > section#form-contacto > h2{
     flex: 0 100%;

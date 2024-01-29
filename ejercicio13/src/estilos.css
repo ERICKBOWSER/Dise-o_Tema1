@@ -31,6 +31,13 @@ header > nav#iconos-cabecera{
     cursor: pointer;
 }
 
+label[for="hamburguer-icon"] > input#hamburguer-icon > span.hamburguer-line{
+    color: white;
+    background-color: white;
+
+    border: 1px solid red;
+}
+
 
 
 header > div#buscador{
