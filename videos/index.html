@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+    <section>
+        <video id="video" controls preload="none" poster="img/trailer.png">
+            <source id="mp4" src="videos/trailer.mp4" type="video/mp4">
+            <source id="webm" src="videos/trailer.webm" type="video/webm">
+            <source id="ogv" src="videos/trailer.ogv" type="video/ogv">
+        </video>
+        <div id="buttons">
+            <button onclick="getVideo().load()">
+                <img class="imagenes" src="img/bx-loader-circle.svg">
+            </button>
+            <button onclick="getVideo().play()">
+                <img class="imagenes" src="img/bx-play (1).svg">
+            </button>
+            <button onclick="getVideo().pause()">
+                <img class="imagenes" src="img/bx-pause.svg">
+            </button>
+            <button onclick="getVideo().currentTime-=10">
+                <img class="imagenes png1" src="img/tiempo-atras-diez.png">
+            </button>
+            <button onclick="getVideo().currentTime+=10">
+                <img class="imagenes png1" src="img/tiempo-adelante-diez.png">
+            </button>
+            <button onclick="getVideo().playbackRate-=0.1">
+                <img class="imagenes png1" src="img/retroceder.png">
+            </button>
+            <button onclick="getVideo().playbackRate+=0.1">
+                <img class="imagenes png1" src="img/adelantar.png">
+            </button>
+            <button onclick="getVideo().volume+=0.1">
+                <img class="imagenes" src="img/bx-plus.svg">
+            </button>
+            <button onclick="getVideo().volume-=0.1">
+                <img class="imagenes" src="img/bx-minus.svg">
+            </button>
+            <button onclick="getVideo().muted=true">
+                <img class="imagenes" src="img/bxs-volume-mute (1).svg">
+            </button>
+            <button onclick="getVideo().muted=false">
+                <img class="imagenes" src="img/bxs-volume-full (1).svg">
+            </button>
+        </div>
+    </section>
+
+</body>
+
+</html>

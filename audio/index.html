@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <title>Reproductor de música</title>
 </head>
 <body>
     <h1>Reproductor de música</h1>
 
-    <audio id="audio" controles>
-        <source src="https://manzdev.github.io/codevember2017/assets/eye-tiger.mp3" type="audio/mp3">
-        Tu navegador no soporta el audio.
-    </audio>
-
+    <audio id="audio" src="https://manzdev.github.io/codevember2017/assets/eye-tiger.mp3" type="audio/mp3"></audio>
 
     <div id="controles">
-        <button onclick="repPausar()">Reproducir/Pausar</button>
-        <button onclick="repParar()">Parar</button>
-        <button onclick="repSiguiente()">Siguiente</button>
-        <button onclick="repAnterior()">Anterior</button>
-    </div>
-    <div id="lineaTiempo">
-        <div id="progreso"></div>
+        <button id="reproPausar">
+            <img src="img/bx-play.svg" alt="play"/>
+        </button>
+        <button id="reiniciar">
+            <img src="img/bx-stop.svg" alt="stop"/>
+        </button>
+        <button id="quitarVolumen">
+            <img src="img/bxs-volume-mute.svg" alt="quitarVol"/>
+        </button>
+        <button id="maxVolumen">
+            <img src="img/bxs-volume-full.svg" alt="maxVolumen"/>
+        </button>
     </div>
 
     <script src="audio.js"></script>
