@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/css/estilos.css" />
     <title>Inicio - Innovate Pc Parts</title>
 </head>
+
 <body>
     <header>
-        <img src="img/menu-regular-24.png" alt="menu">
-        <img src="img/male-regular-24.png" alt="logo">
-        <img src="img/user-solid-24.png" alt="usuario">
-        <img src="img/shopping-bag-regular-24.png" alt="comprar">
-
-        <div>
-            <input type="text" id="buscador" name="buscador">
-            <img src="img/search-regular-24.png" alt="imagen del buscador">
+        <div id="divCabecera">
+            <img id="menuLogo" class="imgCabecera" src="img/menu.svg" alt="menu">
+            <span id="logo">Innovate<br>Pc Parts</span>
+            <div>
+                <img id="usuarioLogo" class="imgCabecera" src="img/user-solid-24.png" alt="usuario">
+                <img id="comprarLogo" class="imgCabecera" src="img/shopping-bag-regular-24.png" alt="comprar">
+            </div>
+        </div>
+        <div id="divBuscador">
+            <input type="text" id="buscador" name="buscador" placeholder="Buscar...">
+            <img class="imgCabecera" src="img/search-regular-24.png" alt="imagen del buscador">
         </div>
     </header>
 
-    <section>
+    <section id="promocion">
         <article>
-            <button>
+            <button id="btnIzq">
                 <img class="cambiarImg" src="img/izquierda.png" alt="Boton para cambiar de imagen">
             </button>
             <img src="img/asus-tuf-portatil.png" alt="Imagen de promoción">
-            <button>
+            <button id="btnDcho">
                 <img class="cambiarImg" src="img/derecha.png" alt="Boton para cambiar de imagen">
             </button>
         </article>
@@ -58,7 +64,7 @@
 
     <section>
         <h1>Ofertas de la semana</h1>
-        <button><a href="html/ofertas.html">Ver más</a></button>
+        <a href="html/ofertas.html">Ver más</a>
 
         <article>
             <a href="html/portatiles.html">Portátiles</a>
@@ -98,10 +104,11 @@
             <p>Aviso legal</p>
             <img src="img/message-alt-x-regular-24.png" alt="Imagen de un icono de ver más">
         </div>
-        
+
         <img src="img/visa.png" alt="Imagen del logo de Visa">
         <img src="img/MasterCard_Logo.svg.png" alt="imagen del logo de MasterCard">
     </footer>
-    
+
 </body>
+
 </html>

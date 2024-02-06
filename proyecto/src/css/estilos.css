@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    flex: 100%;
+}
+
+header{
+    background-color: #0741A6;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    color: white;
+    height: 70px;
+    flex: 0 100%;
+}
+
+header > div#divCabecera{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 100%;
+
+    border: 1px solid red;
+}
+
+header > div > img.imgCabecera{
+    width: 20px;
+    height: 20px;
+}
+
+header > div#divBuscador{
+    position: absolute;
+    top: 64px;
+    z-index: 50px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 6px;
+
+    border: 1px solid black;
+}
+
+header > div#divBuscador > input{
+    border: none;
+}
+/*
+section > article#promocion > button{
+    position: absolute;
+    top: 300px;
+
+    border: 1px solid yellow;
+}*/
+
+section#promocion{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+
+    border: 1px solid green;
+}
+
+section#promocion > article{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnIzq{
+    float: left;
+    left: 200px;
+
+    border: 1px solid green;
+}
+
+section#promocion > article > button{
+    flex: 0 5%;
+    height: 60px;
+}
+
+section#promocion > article > img{
+    width: 400px;
+}
+
+section#principal{
+    display: flex;
+    flex-flow: row wrap;
+    width: 95%;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    background-color: #0741A6;
+}
+
+section#principal > article{
+    flex: 0 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0741A6;
+    color: white;
+    margin-bottom: 1rem;
+
+    border: 1px solid red;
+}
+
+section#principal > article > a > img{
+    width: 200px;
+}
+
