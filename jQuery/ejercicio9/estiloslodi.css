@@ -55,6 +55,13 @@ header > nav#menu-principal > input#menu-hamburger:checked + ul#menu{
     list-style: none;
 }
 
+.headerFijado{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    opacity: 0.75;
+}
+
 ul#menu{
     display: none;
 }
