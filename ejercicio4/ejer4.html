@@ -17,10 +17,26 @@
 <body>
     <form method="ejer4.html" action="post">
         <h1>Iniciar sesión</h1>
-        <input type="email" name="email" id="email" placeholder="Email" required />
-        <input type="password" name="password" id="password" placeholder="Contraseña" required />
-        <p>Recuperar contraseña</p>
-        <button type="submit" name="btnEnviar">Iniciar sesión</button>
+
+        <div class="contenedor">
+            <input type="text" name="password" id="password" placeholder="Nombre..."/>
+            <span class="error">Este campo es obligatorio</span>
+        <div class="contenedor">
+
+        <div class="contenedor">
+        <input type="email" name="email" id="email" placeholder="Email..." required />
+        <span class="error">Este campo es obligatorio</span>
+        </div>
+        
+        <div class="contenedor">
+            <textarea id="areaTexto" name="areaTexto"></textarea>
+            <span id="contArea">Dispone de 100 caracteres</span>
+        </div>
+
+        <div class="contenedor">
+            <label for="fecha">Fecha:</label>
+            <input type="text" id="datepicker">
+        </div>
     </form>
 
 </body>

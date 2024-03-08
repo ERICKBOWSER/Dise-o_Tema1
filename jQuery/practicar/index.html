@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            // siblings permite seleccionar objetos, como aquí seleccionamo la etiqueta p que este "selected"
+            $("p").siblings(".selected").css({"color" : "red"});
+
+            // children permite seleccionar los hijos
+            $("ul.level-2").children().css({"background" : "red"});
+
+            // parent permite seleccionar al padre
+            $("ul.level-1").parent().css({"background" : "green"});
+
+            // next() permite seleccionar al siguiente hermano
+            $("li.hermano").next().css({"background" : "violet"});
+
+            // even() selecciona a los pares
+            $("ul#hermano > li").even().css({"background" : "blue"})
+
+            // first selecciona al primer elemento
+            $("ul#hermano > li").first().css({"background" : "#ccc"})
+
+            // last selecciona al último elemento
+            $("ul#hermano > li").last().css({"background" : "black"})
+
+            $("p").click(function(){
+                alert($(this).text());
+            })
+
+            $("button").click(function(){
+                // toggle muestra los elementos ocultos o viceversa
+                $("p").toggle("slow" | 5000);
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <div><span>Hello</span></div>
+    <p class="selected">Hello Again</p>
+    <p>And Again</p>
+
+    <div>
+        <ul class="level-1">
+            <li class="item-i"> I </li>
+            <li class="item-ii"> II
+            <ul class="level-2">
+            <li class="item-a">A</li>
+            <li class="item-b">B
+            <ul class="level-3">
+            <li class="item-1">1</li>
+            <li class="item-2">2</li>
+            <li class="item-3">3</li>
+            </ul>
+            </li>
+            <li class="item-c">C</li>
+            </ul>
+            </li>
+            <li class="item-iii"> III </li>
+            </ul>
+    </div>
+
+    <div>
+        <ul id="hermano">
+            <li class="hermano"> I </li>
+            <li class="item-ii"> II
+            <ul class="level-2">
+            <li class="item-a">A</li>
+            <li class="item-b">B
+            <ul class="level-3">
+            <li class="item-1">1</li>
+            <li class="item-2">2</li>
+            <li class="item-3">3</li>
+            </ul>
+            </li>
+            <li class="item-c">C</li>
+            </ul>
+            </li>
+            <li class="item-iii"> III </li>
+            <li class="item-iii"> III </li>
+            <li class="item-iii"> IV </li>
+            <li class="item-iii"> IV </li>
+            </ul>
+    </div>
+    
+    <div>
+        <button>Toggle</button>
+        <p>Hola</p>
+        <p style="display:none">Hola</p>
+        <p style="display:none">Hola</p>
+        <p style="display:none">Hola</p>
+        <p style="display:none">Hola</p>
+        <p style="display:none">Hola</p>
+
+    </div>
+</body>
+
+</html>

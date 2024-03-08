@@ -240,17 +240,25 @@ section#ofertas > article > div#secOfertas > a{
     font-size: 0.9rem;
 }
 
-section#ofertas > article > div.datos-ofertas{
+section#ofertas > article > div.datos-ofertas {
     display: flex;
     flex-flow: row wrap;
-    background-color: white;
-    flex: 0 40%;
-    margin-top: 1.5rem;
-    border-radius: 0.2rem;
+    justify-content: space-around;
+    width: 100%;
+    
 
 }
 
-section#ofertas > article > div.datos-ofertas > span.envio{
+section#ofertas > article > div.datos-ofertas > a{
+    width: 40%;
+    background-color: white;
+    margin-top: 1.5rem;
+    border-radius: 0.2rem;
+    color: black;
+}
+
+
+section#ofertas > article > div.datos-ofertas > a > span.envio{
     border: 2px solid #209E0B;
     border-radius: 0.2rem;
     padding: 0.2rem;
@@ -262,12 +270,12 @@ section#ofertas > article > div.datos-ofertas > span.envio{
     font-size: 0.8rem;
 }
 
-section#ofertas > article > div.datos-ofertas > img{
+section#ofertas > article > div.datos-ofertas > a > img{
     width: 140px;
     margin-top: -1.3rem;
 }
 
-section#ofertas > article > div.datos-ofertas > p{
+section#ofertas > article > div.datos-ofertas > a > p{
     font-size: 0.8rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -275,13 +283,13 @@ section#ofertas > article > div.datos-ofertas > p{
 
 
 
-section#ofertas > article > div.datos-ofertas > span.precio-oferta{
+section#ofertas > article > div.datos-ofertas > a > span.precio-oferta{
     font-size: 1.2rem;
     color: #A32A2A;
     margin-left: 0.5rem;
 }
 
-section#ofertas > article > div.datos-ofertas > span.precio-recomendado{
+section#ofertas > article > div.datos-ofertas > a > span.precio-recomendado{
     font-size: 0.9rem;
     color: #ccc;
     margin-left: 0.3rem;
@@ -569,13 +577,135 @@ section#secProductos > article > div.articulo-contenedor > a > span.precio-recom
     margin-left: 0.7rem;
 }
 
+/* VER PRODUCTO*/
 
+section#secProducto > article{
+    display: block;
+}
 
+section#secProducto > article > div#atras > a{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    color: black;
+    margin-bottom: -2rem;
+}
 
+section#secProducto > article > div.articulo-contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: baseline;
+}
 
+section#secProducto > article > div.articulo-contenedor > img{
+    width: 300px;
+    margin: 0 auto;
+}
 
+section#secProducto > article > ul > li{
+    list-style: circle;
+    margin-bottom: 0.4rem;
+}
 
+section#secProducto > article > ul > li > ul > li{
+    margin-bottom: 0.4rem;
+}
 
+section#secProducto > article > div#datosEnvio{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section#secProducto > article > div#datosEnvio h3 > strong{
+    color: #209E0B;
+}
+
+section#secProducto > article > div#datosEnvio > div#envioCasa{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+section#secProducto > article > div#datosEnvio > div#envioCasa > img{
+    margin-right: 1rem;
+}
+
+section#secProducto > article > div#datosEnvio > div#envioCasa > span#llegadaCompra{
+    flex: 100%; 
+    margin-left: 2.5rem;
+    color: #209E0B;
+}
+
+section#secProducto > article > div#datosEnvio > div#recogerSitio{
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+
+}
+
+section#secProducto > article > div#datosEnvio > div#recogerSitio > img{
+    margin-right: 1rem;
+}
+
+section#secProducto > div#comprar{
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    padding: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    border: 1px solid #CC4E00;
+}
+
+section#secProducto > div#comprar > span{
+    flex: 80%;
+    font-size: 1.4rem;
+}
+
+section#secProducto > div#comprar > button{
+    padding: 0.7rem 5rem;
+    color: white;
+    background-color:  #CC4E00;
+    border-radius: 0.2rem;
+    border: none;
+    margin-top: 0.4rem;
+    cursor: pointer;
+}
+
+/* PC */
+
+section#secProducto > article > div.contenedorSeleccion > button.botones{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+section#secProducto > article > div.contenedorSeleccion > button.botones:focus{
+    border: 1px solid #0741A6;
+}
+
+/* AVISO LEGAL*/
+
+section > h1#avisos-legales{
+    width: 100%;
+    padding: 1rem;
+    background-color: #0741A6;
+    margin: 0 auto;
+    margin-top: 1.4rem;
+    text-align: center;
+    color: white;
+}
+
+section > article.info-legal{
+    width: 90%;
+    margin: auto;
+}
 
 
 
@@ -744,3 +874,31 @@ div#volverarriba > a{
   }
   
 
+  @media(min-width: 800px){
+    section#principal > article{
+        width: 30%;
+    }
+
+    section#secProductos > article > div.articulo-contenedor > a {
+        flex: 0 30%;
+    }
+
+    section#secProductos > article > div.articulo-contenedor > a > img{
+        width: 220px;
+    }
+
+    section#secProducto > article > div.articulo-contenedor > h1{
+        flex: 100%;
+        text-align: center;
+    }
+
+    section#secProducto > article > div.articulo-contenedor > div#estrella{
+        width: 74%;
+        margin: auto;
+    }
+
+    #envioCasa{
+        width: 100%;
+    }
+
+  }

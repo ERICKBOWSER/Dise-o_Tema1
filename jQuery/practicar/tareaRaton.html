@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*
+            $("p> img").mouseenter(function(){
+                $("span").toggle();
+            });
+            $("p > img").mouseleave(function(){
+                $("span").toggle();
+            })*/
+
+            $("p > img").click(function(){
+                $("span").toggle();
+            })
+
+            $("p> img").dblclick(function(){
+                $("span").toggle();
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <p>
+        <img src="img/zapato1.jpg">
+        <span style="display: none;">Holas</span>
+    </p>
+    
+</body>
+</html>

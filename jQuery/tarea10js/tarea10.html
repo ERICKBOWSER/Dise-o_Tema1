@@ -10,10 +10,21 @@
     <script src="js/eventos.js"></script>
     <script>
         $(document).ready(function(){
-            $("section > div > div").click(function(e){
-                $("section > div > div").siblings(".texto").fadeToggle("slow");
-                
-            });
+            $(".texto").fadeOut();
+
+           $("section > div").on({
+            click: function(){
+                $("section > div.texto").fadeOut();
+
+                if($(this).siblings(".texto").is(":hidden")){
+                    $(this).siblings(".texto").fadeIn(200);
+                    $(this).find("svg:nth-child(2)").fadeOut(200);
+                }else{
+                    $(this).siblings(".texto").fadeOut(200);
+                    $(this).find("svg:nth-child(2)").fadeIn(200);
+                }
+            }
+           })
         })
     </script>
 
