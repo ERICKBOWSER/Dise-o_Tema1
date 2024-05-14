@@ -6,27 +6,42 @@
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
 		<script src="jq/jquery-3.7.1.js" type="text/javascript"></script>
 		<script>
-            $(document).ready(function(){
+			$(function(){
+				//$('h3#titular1').hide();
 
+				/*
+				$('#noticia1').mouseenter(function(){
+					$('#titular1').show();
+				}).mouseout(function(){
+					$('#titular1').hide();
+				});
+				$('#noticia2').mouseenter(function(){
+					$('#titular2').show();
+				}).mouseout(function(){
+					$('#titular2').hide();
+				});
+				$('#noticia3').mouseenter(function(){
+					$('#titular3').show();
+				}).mouseout(function(){
+					$('#titular3').hide();
+				});*/
 
-                $(document).keydown(function(e){
-                    if(e.key === "d"){
-                        $("#titular1").toggle();
-						$("#titular2").toggle();
-						$("#titular3").toggle();
-                    }
-                });
-            });
+				// UN CLICK Y DOBLE CLICK
+				$('#noticia1').click(function(){
+					$('#titular1').show();
+				}).dblclick(function(){
+					$('#titular1').hide();
+				})
 
-
-        </script>
+			})
+		</script>
 	</head>
 	<body>
 		<header>
-			<h1>PRÁCTICANDO CON LOS EVENTOS DE RATÓN -_-</h1>
+			<h1>PRÁCTICANDO CON LOS EVENTOS DE RATÓN</h1>
 		</header>
 		<section>
-			<h2>ÚLTIMAS NOTICIAS</h2>
+			<h2>ÚLTIMAS NOTICIAS aaaaaaaa</h2>
 			<div id="news">
 				<article class="noticia">
 					<img id="noticia1" src="img/noticia1.jpg" width=200 height=200 alt="Imagen de la noticia 1">
