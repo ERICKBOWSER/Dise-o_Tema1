@@ -17,7 +17,9 @@
 	<script>
 		$(document).ready(function(){
 
+			// Se activa cuando hacemos scroll
 			$(window).scroll(function(){
+				// Si el scroll es mayor a 0 añade la clase fijado al header
 				if($(this).scrollTop()>0){
 					$("header").addClass("headerFijado");
 				}else{

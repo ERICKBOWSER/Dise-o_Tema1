@@ -4,6 +4,7 @@
 	    <title>Fading en jQuery</title>
 		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
 		<script>
+			/*
 		$(document).ready(function(){
 			$("#ocultartoda").click(function(e){
 				$("#milista").fadeOut();
@@ -27,6 +28,33 @@
 						$("#e3").fadeTo(500, opacidad_deseada);
 					});
 				});
+			})
+		})*/
+
+		$(document).ready(function(){
+			$("#ocultartoda").click(function(e){
+				$("#milista").fadeOut();
+			});
+			$("#mostrartoda").click(function(e){
+				$("#milista").fadeIn();
+			});
+			$("#ocultarmostrar").click(function(e){
+				$("#milista").fadeOut("slow", function(){
+					$(this).fadeIn("slow");
+				});
+			});
+			$("#selopacidad").change(function(e){
+				var opacidad_deseada = e.target.options[e.target.selectedIndex].value;
+				$("h1").fadeTo(1000, opacidad_deseada);
+			});
+
+			$("#pororden").click(function(e){
+				var opacidad_deseada = $("#selopacidad").val();
+				$("#e1").fadeTo(500, opacidad_deseada, function(){
+					$("#e2").fadeTo(500, opacidad_deseada, function(){
+						$("#e3").fadeTo(500, opacidad_deseada);
+					})
+				})
 			})
 		})
 		</script>

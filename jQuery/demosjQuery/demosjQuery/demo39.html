@@ -23,6 +23,7 @@
 		<p>La longitud de la cola es: <span></span></p>
 		<div></div>
 		<script>
+			/*
 			var div = $('div');
 			function runIt(){
 			  div
@@ -40,6 +41,28 @@
 			  $('span').text(n.length);
 			  setTimeout(showIt, 100);
 			}
+			runIt();
+			showIt();*/
+
+			var div=$("div");
+			function runIt(){
+				div
+				.show('slow')
+				.animate({left: '+=200'}, 2000)
+				.slideToggle(1000)
+				.slideToggle('fast')
+				.animate({left:"-=200"}, 1500)
+				.hide('slow')
+				.show(1200)
+				.slideUp('normal', runIt);
+			}
+
+			function showIt(){
+				var n = div.queue('fx');
+				$('span').text(n.length);
+				setTimeout(showIt, 100);
+			}
+
 			runIt();
 			showIt();
 		</script>

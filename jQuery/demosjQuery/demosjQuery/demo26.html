@@ -20,6 +20,7 @@
 		</style>
 		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>   
 		<script>
+			/*
 			var numClics = 0;
 			var numDobleClics = 0;
 			$(document).ready(function(){
@@ -31,7 +32,22 @@
 					numClics++;
 					$("#mensaje").html("Has hecho clic<br>" + "Número de clics: " + numClics + "<br>Número de doble clics: " + numDobleClics);
 				});
-			})
+			})*/
+
+			$(document).ready(function(){
+				var numClics = 0;
+				var numDobleClics = 0;
+
+				$("#micapa").dblclick(function(e){
+					numDobleClics++;
+					$("#mensaje").html("Has hecho doble-clic<br>" + "Número de clics: " + numClics + "<br>Número de doble clics: " + numDobleClics);
+				});
+				$("#micapa").click(function(e){
+					numClics++;
+					$("#mensaje").html("Has hecho clic<br>" + "Numero de clics: " + numClics + "<br>Número de doble clics: " + numDobleClics);
+				});
+			});
+
 		</script>
 	</head>
 	<body>

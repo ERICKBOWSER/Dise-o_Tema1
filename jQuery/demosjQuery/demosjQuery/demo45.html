@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
         <script>
+            /*
             $(document).ready(function()
                 {
                 $("#comenzarefectos").click(function(){
@@ -24,7 +25,28 @@
                 $("#finalizaefectoactual").click(function(){
                     $("#funciones").stop(false,true);
                 });
-            });
+            });*/
+
+            $(document).ready(function(){
+                $("#comenzarefectos").click(function(){
+                    $("#funciones").slideUp(4000);
+                    $("#funciones").slideDown(4000);
+                });
+
+                $("#paraactual").click(function(){
+                    $("#funciones").stop();
+                });
+
+                $("#paratodo").click(function(){
+                    $("#funciones").stop(true);
+                });
+
+                $("#finalizaefectoactual").click(function(){
+                    $("#funciones").stop(false, true);
+                })
+            })
+ 
+
         </script>
         <style>
             #funciones{

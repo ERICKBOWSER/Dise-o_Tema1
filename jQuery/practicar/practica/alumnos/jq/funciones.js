@@ -86,11 +86,6 @@ $(document).ready(function () {
         }
     });
 
-    subir.click(function(){
-        $("html").animate({
-            scrollTop:0
-        })
-    })
 
     $("#nombre, email2, tlfno").blur(function(){
         var error = $(this).siblings(".error-chat");

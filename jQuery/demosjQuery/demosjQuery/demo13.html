@@ -19,6 +19,7 @@
   <button>Borrar el dato "variable" del div</button>
   <p>El valor de "variable" en el div es <span>?</span></p>
   <script>
+    /*
     $( "button" ).click(function() {
       var value;
       switch ( $( "button" ).index( this ) ) {
@@ -40,7 +41,32 @@
       }
       //Inserta texto en la etiqueta span
       $( "span" ).text( "" + value );
+    });*/
+
+    $('button').click(function(){
+      var value;
+      switch($("button").index(this)){
+        case 0:
+          $("div").data("variable", "hola");
+          value="¡Valor almacenado correctamente!";
+          break;
+        case 1:
+          value = $("div").data("variable");
+          break;
+        case 2:
+          $("div").data("variable", 86);
+          value = "¡Valor almacenado correctamente!";
+          break;
+        case 3:
+          $("div").removeData("variable");
+          value = "¡Variable borrada!";
+          break;        
+      }
+      //Inserta texto en la etiqueta span
+      $("span").text("" + value);
+
     });
+
   </script>
   </body>
 </html>

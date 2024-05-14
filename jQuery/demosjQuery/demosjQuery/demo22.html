@@ -18,13 +18,21 @@
 	    p{margin:0;}
     </style>
     <script type="text/javascript">
+		/*
     	$(document).ready(function(){
     		
     		$("#mi-capa").mouseover(function(evento){
     			var posactual=parseInt($(this).css("left"));
     			$(this).css("left", posactual + 10 + "px");
     		});
-    	})
+    	})*/
+
+		$(document).ready(function(){
+			$("#mi-capa").mouseover(function(evento){
+				var posactual=parseInt($(this).css("left")); // El posactual es para que se vaya guardando la posición cada vez que se mueve
+				$(this).css("left", posactual + 10 + "px");
+			})
+		})
     </script>
   </head>
   <body>

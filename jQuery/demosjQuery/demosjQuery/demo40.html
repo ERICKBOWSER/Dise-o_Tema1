@@ -15,7 +15,7 @@
           background: green;
           display: none;
         }
-        div.newcolor {background: blue;}
+        div.newColor {background: blue;}
       </style>
   </head>
   <body>
@@ -24,6 +24,7 @@
     <div></div>
      
     <script>
+      /*
       $('#start').click(function() {
         $('div')
           .show('slow')
@@ -41,6 +42,27 @@
         $('div')
           .queue('fx', [])
           .stop();
+      });
+      */
+
+      $("#start").click(function(){
+        $("div")
+        .show('slow')
+        .animate({left: '+=200'}, 2000)
+        .queue(function(){
+          $(this).addClass("newColor").dequeue();
+        })
+        .animate({left: "-=200"}, 500)
+        .queue(function(){
+          $(this).removeClass("newColor").dequeue();
+        })
+        .slideUp();
+      });
+
+      $("#stop").click(function(){
+        $("div")
+        .queue("fx", [])
+        .stop();
       });
     </script>
   </body>

@@ -7,7 +7,10 @@
 		<script>
 			$(document).ready(function(){
 				alert("A continuación se van a cambiar los tipos de viñetas de la lista");
-				$('li').attr("type", "square");
+				$('li').each(function(i){
+					$(this).attr("type", "square");
+				})
+				//$('li').attr("type", "square");
 			});
 		</script>
 	</head>

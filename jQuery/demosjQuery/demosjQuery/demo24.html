@@ -17,6 +17,7 @@
 	    p{margin:0;}
     </style>
     <script type="text/javascript">
+		/*
     	$(document).ready(function(){
     		$("#mi-capa").click(function(evento){
     			$(this).css("width", function(index, value){
@@ -24,7 +25,16 @@
     				return (parseInt(value) + parseInt(aumento)) + "px";
     			});
     		});
-    	})
+    	})^*/
+
+		$(document).ready(function(){
+			$("#mi-capa").click(function(evento){
+				$(this).css("width", function(index, value){ // El index a pesar de que no se pone se encarga de pillar el valor actual del width que ya tiene
+					var aumento = prompt("¿Cuánto quieres aumentar?", "28");
+					return (parseInt(value) + parseInt(aumento)) + "px";
+				})
+			})
+		})
     </script>
   </head>
   <body>
