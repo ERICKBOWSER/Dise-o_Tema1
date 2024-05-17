@@ -58,12 +58,69 @@ $(document).ready(function(){
             $("#window-chat").slideDown();
             
         }
-    })
+    });
 
     $("#header-chat2 > span").click(function(){
         $("#header-chat2").slideUp();
         $("#window-chat").slideUp();
         $("#header-chat1").slideDown();
+    });
+
+    $(".producto").mouseenter(function(){
+        $(this).find("a").css("display","flex");
+    })
+
+    $(".producto").mouseleave(function(){
+        $(this).find("a").css("display","");
+    })
+
+    $(window).scroll(function(){
+        $("#go-up").stop(false, true);
+        $("#home-header").stop(false, true);
+
+        if($(this).scrollTop() > 1){
+            $("#go-up").fadeTo(500, 1);
+
+            $("#home-header").css({
+                "position":"fixed",
+                "top":"0px",
+                "width":"100%",
+                "z-index":"1000",
+                "opacity":".7"
+            })
+        }else{
+            //$("#go-up").fadeTo(500, 1);
+            $("#go-up").click(function(){
+                $("html").animate({
+                    scrollTop:0
+                }, 500)
+            })
+
+            $("#home-header").animate({
+                "position":"",
+                "opacity":"1"
+            })
+        }
+    })
+
+    $("#nombre, email2, tlfno").mouseleave(function(){
+        var error = $(this).siblings(".error-chat");
+
+        if($(this).prop("required") && $(this).val().trim().length == 0){
+            error.css("visibility","visible")
+        }else{
+            error.css("visibility","hidden")
+        }
+
+    })
+
+    $("textarea").keyup(function(){
+        var contador = $(this).val().length;
+        if(contador < 100){
+            var resto = 100- contador;
+            $("#info-caracteres").html("Dispone de " + resto);
+        }
+
     })
 
    
